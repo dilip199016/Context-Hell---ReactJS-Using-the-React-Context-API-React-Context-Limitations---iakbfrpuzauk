@@ -1,4 +1,5 @@
 // MyComponent.js
+// components/MyComponent.js
 import React, { useContext } from 'react';
 import ThemeContext from '../contexts/ThemeContext';
 import LanguageContext from '../contexts/LanguageContext';
@@ -6,7 +7,11 @@ import UserContext from '../contexts/UserContext';
 import ConfigContext from '../contexts/ConfigContext';
 
 const MyComponent = () => {
-
+  // Use useContext to get the values from the contexts
+  const { theme, setTheme } = useContext(ThemeContext);
+  const { language, setLanguage } = useContext(LanguageContext);
+  const { user, setUser } = useContext(UserContext);
+  const { config } = useContext(ConfigContext);
 
   return (
     <div>
